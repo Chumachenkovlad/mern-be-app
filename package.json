@@ -1,0 +1,22 @@
+{
+    "name": "mern-be-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "docker:local:up": "docker-compose -f docker-compose.local.yml up",
+        "docker:local:down": "docker-compose -f docker-compose.local.yml down",
+        "start:dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "lodash": "^4.17.15",
+        "mongoose": "^5.9.12"
+    }
+}
