@@ -40,7 +40,7 @@ todosRouter.get("/:id").get((req, res) => {
   });
 });
 
-todosRouter.route("/add").post(async (req, res) => {
+todosRouter.route("/").post(async (req, res) => {
   try {
     let todo = await Todo.create(req.body);
     todo = await todo.save();
@@ -50,7 +50,7 @@ todosRouter.route("/add").post(async (req, res) => {
   }
 });
 
-todosRouter.route("/update/:id").post((req, res) => {
+todosRouter.route("/:id").patch((req, res) => {
   const id = req.params.id;
 
   Todo.findById(id, async (err, todo) => {
@@ -65,7 +65,7 @@ todosRouter.route("/update/:id").post((req, res) => {
   });
 });
 
-todosRouter.route("/remove/:id").delete((req, res) => {
+todosRouter.route("/:id").delete((req, res) => {
   const id = req.params.id;
 
   Todo.findById(id, async (err, todo) => {
